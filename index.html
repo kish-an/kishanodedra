@@ -10,8 +10,9 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Roboto:400,500&display=swap"
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:400,500|Roboto:400,500&display=swap"
         rel="stylesheet">
+
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -53,13 +54,20 @@
     </header>
 
     <main>
-        <section class="title-name">
+        <section class="main-title__name">
             <h1>Hi I'm Kishan Odedra.</h1>
         </section>
-        <div class="title-name--container">
-            <span class="title-name__string"></span>
+        <div class="main-title--container">
+            <span class="main-title--name"></span>
         </div>
 
+        <section class="main-title__info fade-in">
+            <h2 class="main-title__info--highlighted">Web developer</h2> <span
+                class="main-title__info--divider">/</span>
+            <h2 class="main-title__info--highlighted">Biomedical Science student</h2> <span
+                class="main-title__info--divider">/</span>
+            <h2 class="main-title__info--highlighted">Designer</h2>
+        </section>
 
     </main>
 
@@ -67,7 +75,7 @@
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
                 document.getElementById("nav").style.top = "0";
             } else {
                 document.getElementById("nav").style.top = "-50px";
@@ -85,18 +93,15 @@
 
         var searchbar = new Typed(".nav__searchbar", options);
 
-
-        var title = new Typed('.title-name__string', {
-            stringsElement: '.title-name',
+        var title = new Typed('.main-title--name', {
+            stringsElement: '.main-title__name',
             typeSpeed: 80,
-            startDelay: 2000,
+            startDelay: 800,
             loop: false,
 
         });
 
-
-
-        ScrollReveal().reveal('.fade-in', { useDelay: 'onload', delay: 5000, duration: 3000, mobile: true });
+        ScrollReveal().reveal('.fade-in', { useDelay: 'onload', delay: 5000, duration: 1000, mobile: true });
     </script>
 </body>
 
