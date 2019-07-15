@@ -1,7 +1,94 @@
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 1500px; }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit; }
+
+/* Header Styles */
+.nav {
+  border: 3px solid #f7f7f7;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  position: fixed;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  transition: top 0.3s ease; }
+  .nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    .nav ul > li {
+      padding: 8px;
+      display: inline-block; }
+      .nav ul > li > a {
+        text-decoration: none; }
+
+.nav--bg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background: #f7f7f7;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .nav--bg:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+
+.nav__icons {
+  display: inline-block;
+  padding: 5px; }
+
+.nav__icon--dot {
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 1px; }
+
+.nav__icon--red {
+  background-color: #ed594a;
+  margin-left: 5px; }
+
+.nav__icon--yellow {
+  background-color: #fdd800; }
+
+.nav__icon--green {
+  background-color: #5ac05a; }
+
+.nav__searchbar {
+  width: 50%;
+  border-radius: 3px;
+  border: none;
+  background-color: white;
+  height: 25px;
+  color: #666;
+  padding: 5px;
+  font-size: 0.75rem; }
+  .nav__searchbar:focus {
+    outline: none; }
+
+.nav__items {
+  display: inline-block; }
+
+.nav__item {
+  background-image: linear-gradient(to right, transparent 50%, rgba(255, 233, 0, 0.8) 50%);
+  border-radius: 5px;
+  background-size: 200%;
+  transition: background-position .4s ease;
+  margin: 0 8px; }
+  .nav__item:hover, .nav__item:active {
+    background-position: -100%;
+    font-weight: 500; }
+  .nav__item:nth-of-type(3) {
+    margin-right: 5px; }
+  .nav__item > a {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: rgba(109, 109, 109, 0.9); }

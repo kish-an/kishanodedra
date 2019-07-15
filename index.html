@@ -1,13 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Metadata  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/main.css">
     <title>Kishan Odedra</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
 </head>
 <body>
-    
+    <header>
+        <nav class="nav" id="nav">
+            <div class="nav--bg">
+                <div class="nav__icons">
+                    <span class="nav__icon--dot nav__icon--red"></span>
+                    <span class="nav__icon--dot nav__icon--yellow"></span>
+                    <span class="nav__icon--dot nav__icon--green"></span>
+                </div>
+
+                <input type="text" value="" class="nav__searchbar">
+
+                <ul class="nav__items">
+                    <li class="nav__item">
+                        <a href="">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="">Projects</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+                document.getElementById("nav").style.top = "0";
+            } else {
+                document.getElementById("nav").style.top = "-50px";
+            }
+        }
+
+        var options = {
+            strings: ["^1000https://www.My name is Kishan.^8000", "https://www.I'm a self taught web developer.^8000", "https://www.I'm a 2nd year BSc Biomedical Science student.^8000", "https://www.Get in touch at kishan@kishanodeda.com^8000"],
+            typeSpeed: 90,
+            backSpeed: 40,
+            startDelay: 5000,
+            backDelay: 700,
+            loop: true,
+        }
+
+        var typed = new Typed(".nav__searchbar", options);
+
+        ScrollReveal().reveal('.fade-in', { useDelay: 'onload', delay: 5000, duration: 3000, mobile: true });
+    </script>
 </body>
 </html>
