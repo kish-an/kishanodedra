@@ -32,6 +32,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.4.0/lib/darkmode-js.min.js"></script>
 </head>
 
 <body>
@@ -61,6 +62,49 @@
         </nav>
     </header>
 
+    <div class="darkmode">
+        <svg class="darkmode__button" onclick="darkmode.toggle()" viewBox="0 0 480 480">
+            <g>
+                <g>
+                    <path d="M459.782,347.328c-4.288-5.28-11.488-7.232-17.824-4.96c-17.76,6.368-37.024,9.632-57.312,9.632
+                   c-97.056,0-176-78.976-176-176c0-58.4,28.832-112.768,77.12-145.472c5.472-3.712,8.096-10.4,6.624-16.832
+                   S285.638,2.4,279.078,1.44C271.59,0.352,264.134,0,256.646,0c-132.352,0-240,107.648-240,240s107.648,240,240,240
+                   c84,0,160.416-42.688,204.352-114.176C464.55,360.032,464.038,352.64,459.782,347.328z" />
+                </g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+        </svg>
+    </div>
+
     <main>
         <section class="main-title__name">
             <h1>Hi I'm Kishan Odedra.</h1>
@@ -81,7 +125,7 @@
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            if (document.body.scrollTop > 330 || document.documentElement.scrollTop > 330) {
+            if (document.body.scrollTop > 390 || document.documentElement.scrollTop > 390) {
                 document.getElementById("nav").style.top = "0";
             } else {
                 document.getElementById("nav").style.top = "-50px";
@@ -107,6 +151,9 @@
         });
 
         ScrollReveal().reveal('.fade-in', { useDelay: 'onload', delay: 5000, duration: 1000, mobile: true });
+
+        const darkmode = new Darkmode();
+        darkmode.toggle();
     </script>
 </body>
 
