@@ -8,6 +8,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>I'm Kishan</title>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140918599-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140918599-1');
+    </script>
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:400,500|Roboto:400,500&display=swap"
@@ -22,8 +32,6 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-
-
 </head>
 
 <body>
@@ -62,20 +70,18 @@
         </div>
 
         <section class="main-title__info fade-in">
-            <h2 class="main-title__info--highlighted">Web developer</h2> <span
-                class="main-title__info--divider">/</span>
-            <h2 class="main-title__info--highlighted">Biomedical Science student</h2> <span
+            <h2 class="main-title__info--highlighted">Web developer</h2><span class="main-title__info--divider">/</span>
+            <h2 class="main-title__info--highlighted">Biomedical Science student</h2><span
                 class="main-title__info--divider">/</span>
             <h2 class="main-title__info--highlighted">Designer</h2>
         </section>
-
     </main>
 
     <script>
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+            if (document.body.scrollTop > 330 || document.documentElement.scrollTop > 330) {
                 document.getElementById("nav").style.top = "0";
             } else {
                 document.getElementById("nav").style.top = "-50px";
@@ -98,7 +104,6 @@
             typeSpeed: 80,
             startDelay: 800,
             loop: false,
-
         });
 
         ScrollReveal().reveal('.fade-in', { useDelay: 'onload', delay: 5000, duration: 1000, mobile: true });
