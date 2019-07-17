@@ -157,6 +157,18 @@
                 )
         }
 
+        window.onload = (event) => {
+            localStorage.getItem('mode') === 'dark' ?
+                (
+                    document.querySelector('body').classList.add('dark'),
+                    document.getElementById('nav--bg').classList.add('dark')
+                ) :
+                (
+                    document.querySelector('body').classList.remove('dark'),
+                    document.getElementById('nav--bg').classList.remove('dark')
+                )
+        };
+
         var options = {
             strings: ["^1000https://www.My name is Kishan.^8000", "https://www.I'm a self taught web developer.^8000", "https://www.I'm a 2nd year BSc Biomedical Science student.^8000", "https://www.Get in touch at kishan@kishanodeda.com^8000"],
             typeSpeed: 90,
