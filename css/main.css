@@ -9,6 +9,8 @@ html {
 
 /* Body & Dark mode styles */
 body {
+  margin: 0;
+  padding: 0;
   color: #3d3d3d;
   fill: #3d3d3d;
   background-color: #f7f7f7;
@@ -18,19 +20,23 @@ body.dark {
   background-color: #131313;
   color: #fff;
   fill: #fff; }
+  body.dark .darkmode__moon {
+    display: none; }
+  body.dark .darkmode__sun {
+    display: inherit;
+    height: 100%; }
 
 .darkmode {
   position: absolute;
   height: 20px;
-  margin: 12px 16px;
+  margin: 22px 24px;
   display: inline-block;
   cursor: pointer; }
-  .darkmode .darkmode__button {
+  .darkmode .darkmode__moon {
     height: 100%;
     fill: inherit; }
-
-.darkmode__button.dark {
-  fill: white; }
+  .darkmode .darkmode__sun {
+    display: none; }
 
 /* Poor support
 @media (prefers-color-scheme: dark) {
