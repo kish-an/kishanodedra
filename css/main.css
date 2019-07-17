@@ -7,6 +7,41 @@ html {
 *:after {
   box-sizing: inherit; }
 
+/* Body & Dark mode styles */
+body {
+  color: #3d3d3d;
+  fill: #3d3d3d;
+  background-color: #f7f7f7; }
+
+body.dark {
+  background-color: #131313;
+  color: #fff;
+  fill: #fff; }
+
+.darkmode {
+  height: 20px;
+  margin: 12px 16px;
+  display: inline-block;
+  cursor: pointer; }
+  .darkmode .darkmode__button {
+    height: 100%;
+    fill: inherit; }
+
+.darkmode__button.dark {
+  fill: white; }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #131313;
+    color: #fff;
+    fill: #fff; } }
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: #3d3d3d;
+    fill: #3d3d3d;
+    background-color: #f7f7f7; } }
+
 /* Header styles */
 .nav {
   border-bottom: 3px solid transparent;
@@ -94,14 +129,6 @@ html {
     font-family: 'Roboto', Arial, sans-serif;
     color: rgba(109, 109, 109, 0.9); }
 
-.darkmode {
-  cursor: pointer;
-  height: 25px;
-  margin: 10px 5px;
-  display: inline-block; }
-  .darkmode .darkmode__button {
-    height: 100%; }
-
 /* Title styles */
 .main-title--container {
   height: 100vh;
@@ -113,7 +140,7 @@ html {
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 500;
   font-size: 5rem;
-  color: #3d3d3d; }
+  color: inherit; }
 
 .typed-cursor {
   margin-bottom: 20px;
@@ -121,7 +148,7 @@ html {
   font-size: 5rem;
   font-family: 'Montserrat';
   font-weight: 400;
-  color: #3d3d3d;
+  color: inherit;
   -webkit-animation: blink 0.7s infinite;
   -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite; }
@@ -136,7 +163,7 @@ html {
 
 .main-title__info {
   font-family: 'Inconsolata', monospace;
-  color: #3d3d3d;
+  color: inherit;
   text-align: center; }
 
 .main-title__info--highlighted {

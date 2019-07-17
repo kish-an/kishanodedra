@@ -32,7 +32,6 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.4.0/lib/darkmode-js.min.js"></script>
 </head>
 
 <body>
@@ -63,7 +62,9 @@
     </header>
 
     <div class="darkmode">
-        <svg class="darkmode__button" onclick="darkmode.toggle()" viewBox="0 0 480 480">
+        <svg class="darkmode__button"
+            onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')"
+            viewBox="0 0 480 480">
             <g>
                 <g>
                     <path d="M459.782,347.328c-4.288-5.28-11.488-7.232-17.824-4.96c-17.76,6.368-37.024,9.632-57.312,9.632
@@ -151,9 +152,6 @@
         });
 
         ScrollReveal().reveal('.fade-in', { useDelay: 'onload', delay: 5000, duration: 1000, mobile: true });
-
-        const darkmode = new Darkmode();
-        darkmode.toggle();
     </script>
 </body>
 
