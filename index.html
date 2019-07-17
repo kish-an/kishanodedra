@@ -37,7 +37,7 @@
 <body>
     <header>
         <nav class="nav" id="nav">
-            <div class="nav--bg">
+            <div class="nav--bg" id="nav--bg">
                 <div class="nav__icons">
                     <span class="nav__icon--dot nav__icon--red"></span>
                     <span class="nav__icon--dot nav__icon--yellow"></span>
@@ -62,9 +62,7 @@
     </header>
 
     <div class="darkmode">
-        <svg class="darkmode__button"
-            onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')"
-            viewBox="0 0 480 480">
+        <svg class="darkmode__button" onclick="darkMode()" viewBox="0 0 480 480">
             <g>
                 <g>
                     <path d="M459.782,347.328c-4.288-5.28-11.488-7.232-17.824-4.96c-17.76,6.368-37.024,9.632-57.312,9.632
@@ -131,6 +129,20 @@
             } else {
                 document.getElementById("nav").style.top = "-50px";
             }
+        }
+
+        function darkMode() {
+            localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');
+
+            localStorage.getItem('mode') === 'dark' ?
+                (
+                    document.querySelector('body').classList.add('dark'),
+                    document.getElementById('nav--bg').classList.add('dark')
+                ) :
+                (
+                    document.querySelector('body').classList.remove('dark'),
+                    document.getElementById('nav--bg').classList.remove('dark')
+                )
         }
 
         var options = {
