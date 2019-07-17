@@ -45,6 +45,7 @@ body.dark {
 	fill: white;
 }
 
+/* Poor support
 @media (prefers-color-scheme: dark) {
 	body {
 		background-color: rgb(19, 19, 19);
@@ -59,6 +60,7 @@ body.dark {
 		background-color: $bg-colour;
 	}
 }
+8?
 
 /* Header styles */
 
@@ -93,7 +95,7 @@ body.dark {
 	justify-content: space-between;
 	align-items: center;
 	padding: 5px;
-	background: $bg-colour;
+	background: white;
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
 	box-shadow: 0 1px 3px -0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -150,9 +152,9 @@ body.dark {
 	width: 50%;
 	border-radius: 3px;
 	border: none;
-	background-color: white;
+	background-color: #f1f3f4;
 	height: 25px;
-	color: #666;
+	color: $text-colour;
 	padding: 5px;
 	font-size: 0.75rem;
 
@@ -188,7 +190,7 @@ body.dark {
 
 	> a {
 		font-family: 'Roboto', Arial, sans-serif;
-		color: rgba(109, 109, 109, 0.9);
+		color: #6d6d6de6;
 	}
 }
 
