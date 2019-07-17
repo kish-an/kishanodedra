@@ -31,12 +31,30 @@ body.dark {
   height: 20px;
   margin: 22px 24px;
   display: inline-block;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-animation: 5s ease 0s normal forwards 1 fadein;
+  animation: 5s ease 0s normal forwards 1 fadein; }
   .darkmode .darkmode__moon {
     height: 100%;
     fill: inherit; }
   .darkmode .darkmode__sun {
     display: none; }
+
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  66% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0; }
+  66% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /* Poor support
 @media (prefers-color-scheme: dark) {
