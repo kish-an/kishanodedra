@@ -251,6 +251,7 @@ body.dark {
 	font-weight: 500;
 	font-size: 5rem;
 	color: inherit;
+	text-align: center;
 }
 
 .typed-cursor {
@@ -281,6 +282,7 @@ body.dark {
 	font-family: 'Inconsolata', monospace;
 	color: inherit;
 	text-align: center;
+	margin-top: 25px;
 }
 
 .main-title__info--highlighted {
@@ -340,7 +342,6 @@ body.dark {
 
 	/* Main title and title info */
 	.main-title--name {
-		text-align: center;
 		display: inline-block;
 		font-size: 4.5rem;
 		margin-top: -70px;
@@ -383,10 +384,20 @@ body.dark {
 	}
 
 	.main-title__info {
-		margin-top: 75px;
+		margin-top: 45px;
 	}
 
 	.main-title__info--divider {
 		display: block;
+	}
+}
+
+@media (max-width: 405px) {
+	.nav__icons {
+		display: none;
+	}
+
+	.nav__searchbar {
+		width: 85%;
 	}
 }

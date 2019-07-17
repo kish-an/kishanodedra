@@ -183,7 +183,8 @@ body.dark {
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 500;
   font-size: 5rem;
-  color: inherit; }
+  color: inherit;
+  text-align: center; }
 
 .typed-cursor {
   margin-bottom: 20px;
@@ -207,7 +208,8 @@ body.dark {
 .main-title__info {
   font-family: 'Inconsolata', monospace;
   color: inherit;
-  text-align: center; }
+  text-align: center;
+  margin-top: 25px; }
 
 .main-title__info--highlighted {
   display: inline-block;
@@ -250,7 +252,6 @@ body.dark {
     transform: rotate(45deg) translate(-4px, -4px); }
   /* Main title and title info */
   .main-title--name {
-    text-align: center;
     display: inline-block;
     font-size: 4.5rem;
     margin-top: -70px; }
@@ -277,6 +278,12 @@ body.dark {
     font-size: 3.5rem;
     margin-bottom: 85px; }
   .main-title__info {
-    margin-top: 75px; }
+    margin-top: 45px; }
   .main-title__info--divider {
     display: block; } }
+
+@media (max-width: 405px) {
+  .nav__icons {
+    display: none; }
+  .nav__searchbar {
+    width: 85%; } }
