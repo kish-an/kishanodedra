@@ -25,6 +25,10 @@ body.dark {
   body.dark .darkmode__sun {
     display: inherit;
     height: 100%; }
+  body.dark .nav__item {
+    background-image: linear-gradient(to right, transparent 50%, rgba(238, 199, 37, 0.7) 50%); }
+  body.dark .main-title__info--highlighted {
+    background-color: rgba(238, 199, 37, 0.7); }
 
 .darkmode {
   position: absolute;
@@ -55,6 +59,17 @@ body.dark {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+.nav--bg.dark {
+  background: #323639;
+  box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.1), 0 1px 2px 0 rgba(255, 255, 255, 0.06); }
+  .nav--bg.dark:hover {
+    box-shadow: 0 6px 8px -2px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06); }
+  .nav--bg.dark input {
+    background-color: #282c2f;
+    color: white; }
+  .nav--bg.dark a {
+    color: white; }
 
 /* Poor support
 @media (prefers-color-scheme: dark) {
@@ -106,15 +121,7 @@ body.dark {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
   .nav--bg:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
-
-.nav--bg.dark {
-  background: #323639; }
-  .nav--bg.dark input {
-    background-color: #282c2f;
-    color: white; }
-  .nav--bg.dark a {
-    color: white; }
+    box-shadow: 0 6px 8px -2px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
 
 .nav__icons {
   display: inline-block;
@@ -250,6 +257,24 @@ body.dark {
   .animate .nav__bar3 {
     -webkit-transform: rotate(45deg) translate(-4px, -4px);
     transform: rotate(45deg) translate(-4px, -4px); }
+  /* Nav dropdown and links */
+  .nav.mobileNav .nav--bg {
+    height: 100vh;
+    padding-top: 10px;
+    align-items: flex-start; }
+  .nav.mobileNav .nav__items {
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center; }
+  .nav.mobileNav .nav__item {
+    display: block;
+    margin: 6rem;
+    font-size: 1.5rem;
+    font-weight: 500; }
+    .nav.mobileNav .nav__item:hover, .nav.mobileNav .nav__item:active {
+      background: rgba(255, 233, 0, 0.8);
+      border-radius: 5px; }
   /* Main title and title info */
   .main-title--name {
     display: inline-block;

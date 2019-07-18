@@ -48,13 +48,13 @@
 
                 <ul class="nav__items">
                     <li class="nav__item">
-                        <a href="">About</a>
+                        <a href="#">About</a>
                     </li>
                     <li class="nav__item">
-                        <a href="">Projects</a>
+                        <a href="#">Projects</a>
                     </li>
                     <li class="nav__item">
-                        <a href="">Contact</a>
+                        <a href="#">Contact</a>
                     </li>
                 </ul>
 
@@ -143,17 +143,22 @@
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            if (document.body.scrollTop > 390 || document.documentElement.scrollTop > 390) {
-                document.getElementById("nav").style.top = "0";
+            if (!document.getElementById('nav').classList.contains('mobileNav')) {
+                if (document.body.scrollTop > 390 || document.documentElement.scrollTop > 390) {
+                    document.getElementById("nav").style.top = "0";
+                } else {
+                    document.getElementById("nav").style.top = "-50px";
+                }
             } else {
-                document.getElementById("nav").style.top = "-50px";
+                document.getElementById("nav").style.top = "0";
             }
-        }
+        };
 
-        //Mobile nav hamburger menu function
+        //Mobile nav hamburger menu
         function hamburgerMenu(x) {
             x.classList.toggle('animate');
-        }
+            document.getElementById('nav').classList.toggle('mobileNav');
+        };
 
         //Darkmode function
         function darkMode() {
@@ -170,7 +175,7 @@
                     document.querySelector('body').classList.remove('dark'),
                     document.getElementById('nav--bg').classList.remove('dark')
                 )
-        }
+        };
 
         //Darkmode persistence - check setting on load
         window.onload = (event) => {
@@ -193,7 +198,7 @@
             startDelay: 5000,
             backDelay: 700,
             loop: true,
-        }
+        };
 
         //Navbar typed.js 
         var searchbar = new Typed(".nav__searchbar", options);
