@@ -50,9 +50,19 @@
                     <li class="nav__item">
                         <a href="#">About</a>
                     </li>
+                    <div class="horizontal-rule">
+                        <span class="red"></span>
+                        <span class="yellow"></span>
+                        <span class="green"></span>
+                    </div>
                     <li class="nav__item">
                         <a href="#">Projects</a>
                     </li>
+                    <div class="horizontal-rule">
+                        <span class="red"></span>
+                        <span class="yellow"></span>
+                        <span class="green"></span>
+                    </div>
                     <li class="nav__item">
                         <a href="#">Contact</a>
                     </li>
@@ -136,11 +146,36 @@
                 class="main-title__info--divider">/</span>
             <h2 class="main-title__info--highlighted">Designer</h2>
         </section>
+
+        <div class="horizontal-rule fade-in">
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="green"></span>
+        </div>
+
     </main>
 
     <script>
         //Navbar slide down function
-        window.onscroll = function () { scrollFunction() };
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            window.onscroll = function () { mobileScrollFunction() };
+        } else {
+            window.onscroll = function () { scrollFunction() };
+        }
+
+        function mobileScrollFunction() {
+            if (!document.getElementById('nav').classList.contains('mobileNav')) {
+                if (document.body.scrollTop > 360 || document.documentElement.scrollTop > 360) {
+                    document.getElementById("nav").style.top = "0";
+                } else {
+                    document.getElementById("nav").style.top = "-50px";
+                }
+            } else {
+                document.getElementById("nav").style.top = "0";
+            }
+        }
 
         function scrollFunction() {
             if (!document.getElementById('nav').classList.contains('mobileNav')) {
@@ -193,7 +228,7 @@
 
         //Typed.js options
         var options = {
-            strings: ["^1000https://www.My name is Kishan.^8000", "https://www.I'm a self taught web developer.^8000", "https://www.I'm a 2nd year BSc Biomedical Science student.^8000", "https://www.Get in touch at kishan@kishanodeda.com^8000"],
+            strings: ["^1000https://www.My name is Kishan.^8000", "https://www.I'm a self taught web developer.^8000", "https://www.I'm a 2nd year BSc Biomedical Science student.^8000", "https://www.Get in touch at kishan@kishanodedra.com^8000"],
             typeSpeed: 90,
             backSpeed: 40,
             startDelay: 5000,
