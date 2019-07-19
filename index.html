@@ -44,7 +44,7 @@
                     <span class="nav__icon--dot nav__icon--green"></span>
                 </div>
 
-                <input type="text" value="" class="nav__searchbar" id="searchbar" readonly>
+                <input type="text" value="" class="nav__searchbar">
 
                 <ul class="nav__items">
                     <li class="nav__item">
@@ -161,8 +161,6 @@
 
         if (isMobile) {
             window.onscroll = function () { mobileScrollFunction() };
-            //Removes search bar interactivity on mobile
-            //document.getElementById('searchbar').setAttribute('readonly', true);
         } else {
             window.onscroll = function () { scrollFunction() };
         }
