@@ -142,12 +142,12 @@ body.dark {
 		margin: 0 2px;
 		border-radius: 50%;
 		display: inline-block;
-		animation: jumpingDots 4.4s linear infinite;
+		animation: jumpingDots 5.4s linear infinite;
 	}
 
 	@keyframes jumpingDots {
-		20%,
-		40%,
+		25%,
+		35%,
 		100% {
 			transform: translateY(0);
 		}
@@ -163,12 +163,17 @@ body.dark {
 
 	.yellow {
 		background-color: #fdd800;
-		animation-delay: 0.4s;
+		animation-delay: 0.2s;
 	}
 
 	.green {
 		background-color: #5ac05a;
-		animation-delay: 0.8s;
+		animation-delay: 0.4s;
+	}
+
+	//Horizontal rule between title and about section
+	&:nth-of-type(2) {
+		margin-top: -6rem;
 	}
 }
 
@@ -419,7 +424,7 @@ body.dark {
 			height: 100vh;
 			padding-top: 10px;
 			align-items: flex-start;
-			overflow: scroll;
+			overflow: hidden;
 		}
 
 		.nav__icon--dot {
@@ -466,7 +471,7 @@ body.dark {
 
 		.nav__item {
 			display: block;
-			margin: 7rem;
+			margin: 6.5rem;
 			font-size: 1.5rem;
 			font-weight: 500;
 
@@ -474,6 +479,13 @@ body.dark {
 			&:active {
 				background: $highlight-colour;
 				border-radius: 5px;
+			}
+		}
+
+		.horizontal-rule {
+			span {
+				height: 10px;
+				width: 10px;
 			}
 		}
 	}
