@@ -426,11 +426,12 @@ body.dark {
 
 	/* Nav dropdown and links */
 	.nav.mobileNav {
+		overflow: hidden;
+
 		.nav--bg {
 			height: 100vh;
 			padding-top: 10px;
 			align-items: flex-start;
-			overflow: hidden;
 		}
 
 		.nav__icon--dot {

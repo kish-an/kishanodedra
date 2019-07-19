@@ -44,7 +44,7 @@
                     <span class="nav__icon--dot nav__icon--green"></span>
                 </div>
 
-                <input type="text" value="" class="nav__searchbar" id="searchbar">
+                <input type="text" value="" class="nav__searchbar" id="searchbar" readonly>
 
                 <ul class="nav__items">
                     <li class="nav__item">
@@ -162,14 +162,14 @@
         if (isMobile) {
             window.onscroll = function () { mobileScrollFunction() };
             //Removes search bar interactivity on mobile
-            document.getElementById('searchbar').setAttribute('readonly', true);
+            //document.getElementById('searchbar').setAttribute('readonly', true);
         } else {
             window.onscroll = function () { scrollFunction() };
         }
 
         function mobileScrollFunction() {
             if (!document.getElementById('nav').classList.contains('mobileNav')) {
-                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                if (document.body.scrollTop > 320 || document.documentElement.scrollTop > 320) {
                     document.getElementById("nav").style.top = "0";
                 } else {
                     document.getElementById("nav").style.top = "-50px";
