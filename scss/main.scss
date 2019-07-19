@@ -8,6 +8,11 @@ html {
 	height: 1500px; //Testing purposes - Remove after use.
 }
 
+/* Stops ScrollReveal flickering */
+html.sr .load-hidden {
+	visibility: hidden;
+}
+
 *,
 *:before,
 *:after {

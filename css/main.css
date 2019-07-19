@@ -2,6 +2,10 @@ html {
   box-sizing: border-box;
   height: 1500px; }
 
+/* Stops ScrollReveal flickering */
+html.sr .load-hidden {
+  visibility: hidden; }
+
 *,
 *:before,
 *:after {

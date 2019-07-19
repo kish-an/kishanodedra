@@ -140,14 +140,14 @@
             <span class="main-title--name"></span>
         </div>
 
-        <section class="main-title__info fade-in">
+        <section class="main-title__info fade-in load-hidden">
             <h2 class="main-title__info--highlighted">Web developer</h2><span class="main-title__info--divider">/</span>
             <h2 class="main-title__info--highlighted">Biomedical Science student</h2><span
                 class="main-title__info--divider">/</span>
             <h2 class="main-title__info--highlighted">Designer</h2>
         </section>
 
-        <div class="horizontal-rule fade-in">
+        <div class="horizontal-rule">
             <span class="red"></span>
             <span class="yellow"></span>
             <span class="green"></span>
@@ -248,7 +248,9 @@
         });
 
         //ScrollReveal settings 
-        ScrollReveal().reveal('.fade-in', { useDelay: 'onload', delay: 5000, duration: 1000, mobile: true });
+        ScrollReveal().reveal('.fade-in', { useDelay: 'onload', delay: 2000, duration: 1000, mobile: true });
+
+        ScrollReveal().reveal('.horizontal-rule', { useDelay: 'onload', delay: 8000, duration: 3000, mobile: true });
     </script>
 </body>
 
