@@ -44,7 +44,7 @@
                     <span class="nav__icon--dot nav__icon--green"></span>
                 </div>
 
-                <input type="text" value="" class="nav__searchbar">
+                <input type="text" value="" class="nav__searchbar" id="searchbar">
 
                 <ul class="nav__items">
                     <li class="nav__item">
@@ -147,7 +147,7 @@
             <h2 class="main-title__info--highlighted">Designer</h2>
         </section>
 
-        <div class="horizontal-rule">
+        <div class="horizontal-rule fade-in-divider">
             <span class="red"></span>
             <span class="yellow"></span>
             <span class="green"></span>
@@ -161,13 +161,15 @@
 
         if (isMobile) {
             window.onscroll = function () { mobileScrollFunction() };
+            //Removes search bar interactivity on mobile
+            document.getElementById('searchbar').setAttribute('readonly', true);
         } else {
             window.onscroll = function () { scrollFunction() };
         }
 
         function mobileScrollFunction() {
             if (!document.getElementById('nav').classList.contains('mobileNav')) {
-                if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
                     document.getElementById("nav").style.top = "0";
                 } else {
                     document.getElementById("nav").style.top = "-50px";
@@ -250,7 +252,7 @@
         //ScrollReveal settings 
         ScrollReveal().reveal('.fade-in', { useDelay: 'onload', delay: 2000, duration: 1000, mobile: true });
 
-        ScrollReveal().reveal('.horizontal-rule', { useDelay: 'onload', delay: 8000, duration: 3000, mobile: true });
+        ScrollReveal().reveal('.fade-in-divider', { useDelay: 'onload', delay: 8000, duration: 2000, mobile: true });
     </script>
 </body>
 
