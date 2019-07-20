@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:400,500|Roboto:400,500&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -48,7 +49,7 @@
 
                 <ul class="nav__items">
                     <li class="nav__item">
-                        <a href="#">About</a>
+                        <a href="#about" class="about-link">About</a>
                     </li>
                     <div class="horizontal-rule">
                         <span class="red"></span>
@@ -56,7 +57,7 @@
                         <span class="green"></span>
                     </div>
                     <li class="nav__item">
-                        <a href="#">Projects</a>
+                        <a href="#" class="projects-link">Projects</a>
                     </li>
                     <div class="horizontal-rule">
                         <span class="red"></span>
@@ -64,7 +65,7 @@
                         <span class="green"></span>
                     </div>
                     <li class="nav__item">
-                        <a href="#">Contact</a>
+                        <a href="#" class="contact-link">Contact</a>
                     </li>
                 </ul>
 
@@ -153,10 +154,24 @@
             <span class="green"></span>
         </div>
 
+        <section class="about" id="about">
+            <h3 class="about__title">About Me</h3>
+            <div class="about__info">
+                <p class="about__info__text">My name is Kishan Odedra. I'm a 2nd year Biomedical Science student at the
+                    <a href="https://www.shef.ac.uk" target="_blank">University of Sheffield</a>. Welcome to my
+                    portfolio website!</p>
+                <img src="images/ProfilePicCropped.JPG" alt="">
+            </div>
+        </section>
     </main>
 
     <script>
-        //Navbar slide down function
+        //Force scroll to top when refreshing
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+
+        //Navbar slide down functions
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
         if (isMobile) {
@@ -195,6 +210,24 @@
             document.getElementById('nav').classList.toggle('mobileNav');
             document.querySelector('body').classList.toggle('mobileNav');
         };
+
+        //Remove mobile nav after clicking link
+        function myFunction(x) {
+            if (x.matches) {
+                document.querySelector('.about-link').addEventListener('click', function () {
+                    document.getElementById('nav').classList.toggle('mobileNav')
+                })
+                document.querySelector('.projects-link').addEventListener('click', function () {
+                    document.getElementById('nav').classList.toggle('mobileNav')
+                })
+                document.querySelector('.contact-link').addEventListener('click', function () {
+                    document.getElementById('nav').classList.toggle('mobileNav')
+                })
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 768px)");
+        myFunction(x);
 
         //Darkmode function
         function darkMode() {
@@ -248,9 +281,11 @@
         });
 
         //ScrollReveal settings 
-        ScrollReveal().reveal('.fade-in', { useDelay: 'onload', delay: 2000, duration: 1000, mobile: true });
+        ScrollReveal().reveal('.fade-in', { useDelay: 'onload', delay: 2000, distance: '35px', origin: 'bottom', duration: 1000, mobile: true });
 
-        ScrollReveal().reveal('.fade-in-divider', { useDelay: 'onload', delay: 8000, duration: 2000, mobile: true });
+        ScrollReveal().reveal('.fade-in-divider', { useDelay: 'onload', delay: 3500, duration: 2000, scale: 0.3, mobile: true });
+
+        ScrollReveal().reveal('.about', { useDelay: 'onload', delay: 4500, duration: 1500, distance: '200px', origin: 'left', scale: 0.85, mobile: true });
     </script>
 </body>
 

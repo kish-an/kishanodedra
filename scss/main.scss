@@ -5,6 +5,7 @@ $highlight-colour-darkmode: rgba(238, 199, 37, 0.7);
 
 html {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 	height: 1500px; //Testing purposes - Remove after use.
 }
 
@@ -28,6 +29,27 @@ body {
 	fill: $text-colour;
 	background-color: $bg-colour;
 	transition: all 0.5s ease;
+
+	a {
+		background-color: $highlight-colour;
+		border-radius: 5px;
+		text-decoration: none;
+		color: inherit;
+		padding: 0 4px;
+		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+		&:hover {
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+				0 2px 4px -1px rgba(0, 0, 0, 0.06);
+		}
+	}
+
+	h3 {
+		background-color: $highlight-colour;
+		border-radius: 5px;
+		padding: 0 6px;
+		display: inline-block;
+	}
 }
 
 body.dark {
@@ -54,6 +76,17 @@ body.dark {
 
 	.main-title__info--highlighted {
 		background-color: $highlight-colour-darkmode;
+	}
+
+	a {
+		background-color: $highlight-colour-darkmode;
+		box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.1),
+			0 1px 2px 0 rgba(255, 255, 255, 0.06);
+
+		&:hover {
+			box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1),
+				0 2px 4px -1px rgba(255, 255, 255, 0.06);
+		}
 	}
 }
 
@@ -119,6 +152,12 @@ body.dark {
 
 	a {
 		color: white;
+		background: none;
+		box-shadow: none;
+
+		&:hover {
+			box-shadow: none;
+		}
 	}
 }
 
@@ -303,6 +342,12 @@ body.dark {
 	> a {
 		font-family: 'Roboto', Arial, sans-serif;
 		color: #6d6d6de6;
+		background: none;
+		box-shadow: none;
+
+		&:hover {
+			box-shadow: none;
+		}
 	}
 }
 
@@ -370,6 +415,37 @@ body.dark {
 .main-title__info--divider {
 	position: relative;
 	bottom: 280px;
+}
+
+/* About styles */
+.about {
+	max-width: 80%;
+	margin: 5rem auto;
+	font-family: 'Lato', sans-serif;
+}
+
+.about__title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin: 2rem 0;
+}
+
+.about__info {
+	display: flex;
+	justify-content: space-between;
+
+	> img {
+		height: 250px;
+		border-radius: 50%;
+		position: relative;
+		bottom: 50px;
+		margin-right: 20px;
+	}
+
+	.about__info__text {
+		font-size: 1.15rem;
+		margin-right: 30px;
+	}
 }
 
 /* Responsive media queries */
