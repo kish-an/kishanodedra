@@ -32,7 +32,7 @@ body {
   body h3 {
     background-color: rgba(255, 233, 0, 0.8);
     border-radius: 5px;
-    padding: 0 4px;
+    padding: 0 6px;
     display: inline-block; }
 
 body.dark {
@@ -308,11 +308,11 @@ body.dark {
     height: 250px;
     border-radius: 50%;
     position: relative;
-    bottom: 50px;
-    margin-right: 20px; }
-  .about__info .about__info__text {
-    font-size: 1.15rem;
-    margin-right: 30px; }
+    bottom: 50px; }
+
+.about__info__text {
+  font-size: 1.15rem;
+  margin-right: 20px; }
 
 /* Responsive media queries */
 /* Tablets */
@@ -320,7 +320,7 @@ body.dark {
   /* Hamburger menu */
   .nav--bg {
     height: 38px;
-    transition: all 0.6s ease;
+    transition: all 0.4s ease;
     align-items: normal; }
   .nav__searchbar {
     width: 70%;
@@ -418,7 +418,19 @@ body.dark {
   .main-title__info {
     margin-top: -85px; }
   .main-title__info--divider {
-    display: block; } }
+    display: block; }
+  /* About section */
+  .about {
+    text-align: center; }
+  .about__info {
+    flex-direction: column-reverse; }
+    .about__info > img {
+      height: 250px;
+      width: 250px;
+      position: unset;
+      margin: 0 auto; }
+  .about__info__text {
+    margin: 25px 0 0; } }
 
 /* Smaller mobile */
 @media (max-width: 405px) {

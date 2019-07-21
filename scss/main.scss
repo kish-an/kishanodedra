@@ -439,13 +439,12 @@ body.dark {
 		border-radius: 50%;
 		position: relative;
 		bottom: 50px;
-		margin-right: 20px;
 	}
+}
 
-	.about__info__text {
-		font-size: 1.15rem;
-		margin-right: 30px;
-	}
+.about__info__text {
+	font-size: 1.15rem;
+	margin-right: 20px;
 }
 
 /* Responsive media queries */
@@ -455,7 +454,7 @@ body.dark {
 	/* Hamburger menu */
 	.nav--bg {
 		height: 38px;
-		transition: all 0.6s ease;
+		transition: all 0.4s ease;
 		align-items: normal;
 	}
 
@@ -618,6 +617,26 @@ body.dark {
 
 	.main-title__info--divider {
 		display: block;
+	}
+
+	/* About section */
+	.about {
+		text-align: center;
+	}
+
+	.about__info {
+		flex-direction: column-reverse;
+
+		> img {
+			height: 250px;
+			width: 250px;
+			position: unset;
+			margin: 0 auto;
+		}
+	}
+
+	.about__info__text {
+		margin: 25px 0 0;
 	}
 }
 
