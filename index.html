@@ -69,7 +69,7 @@
                     </li>
                 </ul>
 
-                <div class="nav__bars" onclick="hamburgerMenu(this)">
+                <div class="nav__bars" onclick="toggleMobileNav(this)">
                     <span class="nav__bar1"></span>
                     <span class="nav__bar2"></span>
                     <span class="nav__bar3"></span>
@@ -166,10 +166,11 @@
     </main>
 
     <script>
-        //Force scroll to top when refreshing
+        /* Force scroll to top when refreshing
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
         }
+        */
 
         //Navbar slide down functions
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -205,29 +206,33 @@
         };
 
         //Mobile nav hamburger menu
-        function hamburgerMenu(x) {
+        function toggleMobileNav(x) {
             x.classList.toggle('animate');
             document.getElementById('nav').classList.toggle('mobileNav');
             document.querySelector('body').classList.toggle('mobileNav');
         };
 
         //Remove mobile nav after clicking link
-        function myFunction(x) {
-            if (x.matches) {
-                document.querySelector('.about-link').addEventListener('click', function () {
-                    document.getElementById('nav').classList.toggle('mobileNav')
-                })
-                document.querySelector('.projects-link').addEventListener('click', function () {
-                    document.getElementById('nav').classList.toggle('mobileNav')
-                })
-                document.querySelector('.contact-link').addEventListener('click', function () {
-                    document.getElementById('nav').classList.toggle('mobileNav')
-                })
-            }
+        function navLinks(x) {
+            document.querySelector('.about-link').addEventListener('click', function () {
+                if (x.matches) {
+                    toggleMobileNav(document.querySelector('.nav__bars'));
+                }
+            });
+            document.querySelector('.projects-link').addEventListener('click', function () {
+                if (x.matches) {
+                    toggleMobileNav(document.querySelector('.nav__bars'));
+                }
+            });
+            document.querySelector('.contact-link').addEventListener('click', function () {
+                if (x.matches) {
+                    toggleMobileNav(document.querySelector('.nav__bars'));
+                }
+            });
         }
 
         var x = window.matchMedia("(max-width: 768px)");
-        myFunction(x);
+        navLinks(x);
 
         //Darkmode function
         function darkMode() {
