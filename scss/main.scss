@@ -1,7 +1,7 @@
 $text-colour: #3d3d3d;
 $bg-colour: #f7f7f7;
 $highlight-colour: rgba(255, 233, 0, 0.8);
-$highlight-colour-darkmode: rgba(238, 199, 37, 0.7);
+$highlight-colour-darkmode: #ffdd03;
 
 html {
 	box-sizing: border-box;
@@ -72,14 +72,21 @@ body.dark {
 			transparent 50%,
 			$highlight-colour-darkmode 50%
 		);
+
+		&:hover,
+		&:active {
+			color: #151515;
+		}
 	}
 
 	.main-title__info--highlighted {
 		background-color: $highlight-colour-darkmode;
+		color: #151515;
 	}
 
 	a {
 		background-color: $highlight-colour-darkmode;
+		color: #151515;
 		box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.1),
 			0 1px 2px 0 rgba(255, 255, 255, 0.06);
 
@@ -87,6 +94,11 @@ body.dark {
 			box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1),
 				0 2px 4px -1px rgba(255, 255, 255, 0.06);
 		}
+	}
+
+	h3 {
+		background-color: $highlight-colour-darkmode;
+		color: #151515;
 	}
 }
 
@@ -156,6 +168,7 @@ body.dark {
 		box-shadow: none;
 
 		&:hover {
+			color: #151515;
 			box-shadow: none;
 		}
 	}
@@ -218,7 +231,7 @@ body.dark {
 
 	//Horizontal rule between title and about section
 	&:nth-of-type(2) {
-		margin-top: -6rem;
+		margin-top: -6.5rem;
 	}
 }
 
@@ -420,7 +433,7 @@ body.dark {
 /* About styles */
 .about {
 	max-width: 80%;
-	margin: 5rem auto;
+	margin: 6.5rem auto;
 	font-family: 'Lato', sans-serif;
 }
 
@@ -552,11 +565,18 @@ body.dark {
 			margin: 6rem;
 			font-size: 1.5rem;
 			font-weight: 500;
+			background-image: linear-gradient(
+				to right,
+				transparent 50%,
+				$highlight-colour 50%
+			);
+			border-radius: 5px;
+			background-size: 200%;
+			transition: background-position 0.4s ease;
 
 			&:hover,
 			&:active {
-				background: $highlight-colour;
-				border-radius: 5px;
+				background-position: -100%;
 			}
 		}
 
@@ -568,8 +588,26 @@ body.dark {
 		}
 	}
 
+	/* Body styles */
 	body.mobileNav {
 		overflow: hidden;
+	}
+
+	body.dark {
+		.nav.mobileNav {
+			.nav__item {
+				background-image: linear-gradient(
+					to right,
+					transparent 50%,
+					$highlight-colour-darkmode 50%
+				);
+
+				&:hover,
+				&:active {
+					color: #151515;
+				}
+			}
+		}
 	}
 
 	/* Main title and title info */
@@ -624,6 +662,10 @@ body.dark {
 		text-align: center;
 	}
 
+	.about__title {
+		margin: 2rem 0 3rem;
+	}
+
 	.about__info {
 		flex-direction: column-reverse;
 
@@ -636,7 +678,7 @@ body.dark {
 	}
 
 	.about__info__text {
-		margin: 25px 0 0;
+		margin: 30px 0 0;
 	}
 }
 
