@@ -86,6 +86,22 @@ body.dark {
 		color: #151515;
 	}
 
+	.project__title {
+		border-bottom: 1px solid white;
+	}
+
+	.project__links--icon {
+		color: white;
+
+		&:hover {
+			background-color: $highlight-colour-darkmode;
+		}
+	}
+
+	.project__links--text {
+		background-color: $highlight-colour-darkmode;
+	}
+
 	a {
 		background-color: $highlight-colour-darkmode;
 		color: #151515;

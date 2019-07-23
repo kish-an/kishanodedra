@@ -53,6 +53,14 @@ body.dark {
   body.dark .main-title__info--highlighted {
     background-color: #ffdd03;
     color: #151515; }
+  body.dark .project__title {
+    border-bottom: 1px solid white; }
+  body.dark .project__links--icon {
+    color: white; }
+    body.dark .project__links--icon:hover {
+      background-color: #ffdd03; }
+  body.dark .project__links--text {
+    background-color: #ffdd03; }
   body.dark a {
     background-color: #ffdd03;
     color: #151515;
