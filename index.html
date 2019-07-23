@@ -20,9 +20,10 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:400,500|Roboto:400,500&display=swap"
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Roboto:400,500&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -33,6 +34,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://kit.fontawesome.com/74e453f1c5.js"></script>
 </head>
 
 <body>
@@ -57,7 +59,7 @@
                         <span class="green"></span>
                     </div>
                     <li class="nav__item">
-                        <a href="#" class="projects-link">Projects</a>
+                        <a href="#projects" class="projects-link">Projects</a>
                     </li>
                     <div class="horizontal-rule">
                         <span class="red"></span>
@@ -163,6 +165,72 @@
                 <img src="images/ProfilePicCropped.JPG" alt="">
             </div>
         </section>
+
+        <div class="horizontal-rule fade-in-divider">
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="green"></span>
+        </div>
+
+        <section class="projects" id="projects">
+            <h3 class="projects__title">Projects</h3>
+            <div class="projects--grid">
+                <div class="project proj1">
+                    <div class="project--front proj1--front">
+                        <h4 class="project__title">1st Example</h4>
+                        <img class="project__thumbnail" src="images/Portfolio-website.png" alt="">
+                    </div>
+                    <div class="project--back proj1--back">
+                        <h4 class="project__title">1st Example</h4>
+                        <p class="project__info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
+                            nesciunt in, maiores tempora repellendus, quaerat numquam delectus reiciendis praesentium
+                            fugiat dolor sapiente molestiae aut eum? Eos, sint quibusdam saepe modi accusantium
+                            consectetur, blanditiis velit et at debitis dolorem magnam atque animi voluptatibus.
+                            Consequuntur minima repellat iure tenetur ad, dignissimos incidunt.</p>
+                        <ul class="project__links">
+                            <li>
+                                <a class="project__links--icon" href="https://github.com/kish-an/kishanodedra"
+                                    target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                                <a class="project__links--text" href="https://github.com/kish-an/kishanodedra"
+                                    target="_blank">Github</a>
+                            </li>
+                            <li>
+                                <a class="project__links--icon" href="#" target="_blank"><i
+                                        class="far fa-file-code fa-2x"></i></a>
+                                <a class="project__links--text" href="" target="_blank">Live Demo</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project proj2">
+                    <div class="project--front proj2--front">
+                        <h4 class="project__title">2nd Example</h4>
+                        <img class="project__thumbnail" src="images/Portfolio-website.png" alt="">
+                    </div>
+                    <div class="project--back proj2--back">
+                        <h4 class="project__title">2nd Example</h4>
+                        <p class="project__info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
+                            nesciunt in, maiores tempora repellendus, quaerat numquam delectus reiciendis praesentium
+                            fugiat dolor sapiente molestiae aut eum? Eos, sint quibusdam saepe modi accusantium
+                            consectetur, blanditiis velit et at debitis dolorem magnam atque animi voluptatibus.
+                            Consequuntur minima repellat iure tenetur ad, dignissimos incidunt.</p>
+                        <ul class="project__links">
+                            <li>
+                                <a class="project__links--icon" href="#" target="_blank"><i
+                                        class="fab fa-github fa-2x"></i></a>
+                                <a class="project__links--text" href="" target="_blank">Github</a>
+                            </li>
+                            <li>
+                                <a class="project__links--icon" href="#" target="_blank"><i
+                                        class="far fa-file-code fa-2x"></i></a>
+                                <a class="project__links--text" href="" target="_blank">Live Demo</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script>
@@ -234,6 +302,17 @@
         var x = window.matchMedia("(max-width: 768px)");
         navLinks(x);
 
+        //Project card flipping
+        document.querySelector('.project').addEventListener('click', function () {
+            document.querySelector('.project--front').classList.toggle("project--front--flip");
+            document.querySelector('.project--back').classList.toggle("project--back--flip");
+        });
+
+        document.querySelector('.proj2').addEventListener('click', function () {
+            document.querySelector('.proj2--front').classList.toggle("project--front--flip");
+            document.querySelector('.proj2--back').classList.toggle("project--back--flip");
+        });
+
         //Darkmode function
         function darkMode() {
             //Toggle darkmode setting - if no setting is stored then default is light
@@ -280,7 +359,7 @@
         //Main title typed.js
         var title = new Typed('.main-title--name', {
             stringsElement: '.main-title__name',
-            typeSpeed: 80,
+            typeSpeed: 70,
             startDelay: 800,
             loop: false,
         });
@@ -291,6 +370,8 @@
         ScrollReveal().reveal('.fade-in-divider', { useDelay: 'onload', delay: 3500, duration: 2000, scale: 0.3, mobile: true });
 
         ScrollReveal().reveal('.about', { useDelay: 'onload', delay: 4000, duration: 1500, distance: '200px', origin: 'left', scale: 0.85, mobile: true });
+
+        ScrollReveal().reveal('.projects', { useDelay: 'onload', delay: 4000, duration: 1500, distance: '200px', origin: 'right', scale: 0.85, mobile: true });
     </script>
 </body>
 
