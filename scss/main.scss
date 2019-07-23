@@ -517,6 +517,7 @@ body.dark {
 	margin: 0;
 	font-weight: bold;
 	position: sticky;
+	position: -webkit-sticky;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -582,7 +583,6 @@ body.dark {
 .project--back {
 	border-radius: 5px;
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-	overflow: scroll;
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	display: inline-block;
@@ -593,10 +593,12 @@ body.dark {
 
 .project--front {
 	transform: perspective(600px) rotateY(0deg);
+	overflow: hidden;
 }
 
 .project--back {
 	transform: perspective(600px) rotateY(180deg);
+	overflow: scroll;
 }
 
 .project--front--flip {
@@ -667,6 +669,7 @@ body.dark {
 			height: 100vh;
 			padding-top: 10px;
 			align-items: flex-start;
+			overflow: hidden;
 		}
 
 		.nav__icon--dot {
@@ -832,6 +835,25 @@ body.dark {
 
 	.about__info__text {
 		margin: 30px 0 0;
+	}
+
+	/* Project section */
+	.projects {
+		text-align: center;
+	}
+
+	.projects--grid {
+		text-align: left;
+	}
+
+	.project__thumbnail {
+		min-height: 80%;
+	}
+
+	.project__links {
+		li {
+			margin: 0 1.5rem;
+		}
 	}
 }
 
