@@ -514,7 +514,8 @@ body.dark {
       width: 10px; }
   /* Body styles */
   body.mobileNav {
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative; }
   body.dark .nav.mobileNav .nav__item:hover, body.dark .nav.mobileNav .nav__item:active {
     color: #151515;
     background-color: #ffdd03; }
@@ -580,7 +581,7 @@ body.dark {
   .projects--grid {
     text-align: left; }
   .project__thumbnail {
-    min-height: 80%; }
+    min-height: 85%; }
   .project__links li {
     margin: 0 1.5rem; } }
 

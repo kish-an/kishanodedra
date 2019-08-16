@@ -733,6 +733,7 @@ body.dark {
 	/* Body styles */
 	body.mobileNav {
 		overflow: hidden;
+		position: relative;
 	}
 
 	body.dark {
@@ -847,7 +848,7 @@ body.dark {
 	}
 
 	.project__thumbnail {
-		min-height: 80%;
+		min-height: 85%;
 	}
 
 	.project__links {

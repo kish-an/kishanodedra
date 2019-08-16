@@ -136,7 +136,7 @@
     </div>
 
     <main>
-        <section class="main-title__name">
+        <section class="main-title__name load-hidden">
             <h1>Hi I'm Kishan Odedra.</h1>
         </section>
         <div class="main-title--container">
@@ -162,7 +162,7 @@
                 <p class="about__info__text">My name is Kishan Odedra. I'm a 2nd year Biomedical Science student at the
                     <a href="https://www.shef.ac.uk" target="_blank">University of Sheffield</a>. Welcome to my
                     portfolio website!</p>
-                <img src="images/ProfilePicCropped.JPG" alt="">
+                <!-- <img src="images/ProfilePicCropped.JPG" alt=""> -->
             </div>
         </section>
 
@@ -251,7 +251,7 @@
 
         function mobileScrollFunction() {
             if (!document.getElementById('nav').classList.contains('mobileNav')) {
-                if (document.body.scrollTop > 320 || document.documentElement.scrollTop > 320) {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
                     document.getElementById("nav").style.top = "0";
                 } else {
                     document.getElementById("nav").style.top = "-50px";
@@ -263,7 +263,7 @@
 
         function scrollFunction() {
             if (!document.getElementById('nav').classList.contains('mobileNav')) {
-                if (document.body.scrollTop > 390 || document.documentElement.scrollTop > 390) {
+                if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
                     document.getElementById("nav").style.top = "0";
                 } else {
                     document.getElementById("nav").style.top = "-50px";
@@ -369,9 +369,9 @@
 
         ScrollReveal().reveal('.fade-in-divider', { useDelay: 'onload', delay: 3500, duration: 2000, scale: 0.3, mobile: true });
 
-        ScrollReveal().reveal('.about', { useDelay: 'onload', delay: 4000, duration: 1500, distance: '200px', origin: 'left', scale: 0.85, mobile: true });
+        ScrollReveal().reveal('.about', { useDelay: 'onload', delay: 4000, duration: 1200, distance: '150px', origin: 'left', scale: 0.9, mobile: true });
 
-        ScrollReveal().reveal('.projects', { useDelay: 'onload', delay: 4000, duration: 1500, distance: '200px', origin: 'right', scale: 0.85, mobile: true });
+        ScrollReveal().reveal('.projects', { useDelay: 'onload', delay: 4000, duration: 1200, distance: '150px', origin: 'right', scale: 0.9, mobile: true });
     </script>
 </body>
 
