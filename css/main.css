@@ -128,7 +128,8 @@ body.dark {
 }
 */
 .horizontal-rule {
-  text-align: center; }
+  text-align: center;
+  display: none; }
   .horizontal-rule span {
     height: 12px;
     width: 12px;
@@ -308,7 +309,8 @@ body.dark {
 .about {
   max-width: 80%;
   margin: 6.5rem auto;
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  display: none; }
 
 .about__title {
   margin: 2rem 0 3rem; }
@@ -331,7 +333,8 @@ body.dark {
 .projects {
   max-width: 80%;
   margin: 6.5rem auto;
-  font-family: 'Inconsolata', sans-serif; }
+  font-family: 'Inconsolata', sans-serif;
+  display: none; }
 
 .projects__title {
   margin: 2rem 0 3rem;

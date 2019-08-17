@@ -197,6 +197,7 @@ body.dark {
 
 .horizontal-rule {
 	text-align: center;
+	display: none; //***REMOVE***
 
 	span {
 		height: 12px;
@@ -441,6 +442,7 @@ body.dark {
 	max-width: 80%;
 	margin: 6.5rem auto;
 	font-family: 'Lato', sans-serif;
+	display: none; //***REMOVE***
 }
 
 .about__title {
@@ -470,6 +472,7 @@ body.dark {
 	max-width: 80%;
 	margin: 6.5rem auto;
 	font-family: 'Inconsolata', sans-serif;
+	display: none; //***REMOVE***
 }
 
 .projects__title {
