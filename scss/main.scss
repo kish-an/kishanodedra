@@ -6,7 +6,6 @@ $highlight-colour-darkmode: #ffdd03;
 html {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-	height: 1500px; //Testing purposes - Remove after use.
 }
 
 /* Stops ScrollReveal flickering */
@@ -31,17 +30,10 @@ body {
 	transition: all 0.5s ease;
 
 	a {
-		background-color: $highlight-colour;
-		border-radius: 5px;
+		border-bottom: 4px solid $highlight-colour;
+		border-radius: 2px;
 		text-decoration: none;
 		color: inherit;
-		padding: 0 4px;
-		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-
-		&:hover {
-			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-				0 2px 4px -1px rgba(0, 0, 0, 0.06);
-		}
 	}
 
 	h3 {
@@ -75,8 +67,8 @@ body.dark {
 			$highlight-colour-darkmode 50%
 		);
 
-		&:hover,
-		&:active {
+		&:hover a,
+		&:active a {
 			color: #151515;
 		}
 	}
@@ -106,18 +98,11 @@ body.dark {
 
 	.project__links--text {
 		background-color: $highlight-colour-darkmode;
+		color: #151515;
 	}
 
 	a {
-		background-color: $highlight-colour-darkmode;
-		color: #151515;
-		box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0.1),
-			0 1px 2px 0 rgba(255, 255, 255, 0.06);
-
-		&:hover {
-			box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1),
-				0 2px 4px -1px rgba(255, 255, 255, 0.06);
-		}
+		border-bottom: 4px solid $highlight-colour-darkmode;
 	}
 
 	h3 {
@@ -143,38 +128,38 @@ body.dark {
 	}
 
 	//Darkmode icon fade in on load
-	-webkit-animation: 5s ease 0s normal forwards 1 fadein;
-	animation: 5s ease 0s normal forwards 1 fadein;
+	-webkit-animation: 4s ease 0s normal forwards 1 grow;
+	animation: 4s ease 0s normal forwards 1 grow;
 
-	@keyframes fadein {
+	@keyframes grow {
 		0% {
-			opacity: 0;
+			transform: scale(0);
 		}
 		66% {
-			opacity: 0;
+			transform: scale(0);
 		}
 		100% {
-			opacity: 1;
+			transform: scale(1);
 		}
 	}
 
-	@-webkit-keyframes fadein {
+	@-webkit-keyframes grow {
 		0% {
-			opacity: 0;
+			transform: scale(0);
 		}
 		66% {
-			opacity: 0;
+			transform: scale(0);
 		}
 		100% {
-			opacity: 1;
+			transform: scale(1);
 		}
 	}
 }
 
 .nav--bg.dark {
 	background: #323639;
-	box-shadow: 0 1px 3px -0 rgba(255, 255, 255, 0.1),
-		0 1px 2px 0 rgba(255, 255, 255, 0.06);
+	box-shadow: 0 1px 2px -0 rgba(255, 255, 255, 0.1),
+		0 1px 1px 0 rgba(255, 255, 255, 0.06);
 
 	&:hover {
 		box-shadow: 0 6px 8px -2px rgba(255, 255, 255, 0.1),
@@ -188,13 +173,8 @@ body.dark {
 
 	a {
 		color: white;
-		background: none;
+		border-bottom: none;
 		box-shadow: none;
-
-		&:hover {
-			color: #151515;
-			box-shadow: none;
-		}
 	}
 }
 
@@ -381,6 +361,7 @@ body.dark {
 		color: #6d6d6de6;
 		background: none;
 		box-shadow: none;
+		border-bottom: unset;
 
 		&:hover {
 			box-shadow: none;
@@ -560,6 +541,7 @@ body.dark {
 		margin: auto;
 		display: inline-block;
 		transition: 0.4s ease;
+		border-bottom: unset;
 		border-radius: 50%;
 
 		&:hover {
@@ -570,12 +552,15 @@ body.dark {
 
 	.project__links--text {
 		margin: 0.6rem 0;
+		padding: 2px;
 		font-family: 'Montserrat', sans-serif;
 		font-weight: bold;
 		background: unset;
 		box-shadow: unset;
+		border: unset;
 		display: block;
 		background-color: $highlight-colour;
+		border-radius: 5px;
 	}
 }
 
