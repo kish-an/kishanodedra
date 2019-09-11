@@ -1,6 +1,6 @@
 $text-colour: #3d3d3d;
 $bg-colour: #f7f7f7;
-$highlight-colour: rgba(255, 233, 0, 0.8);
+$highlight-colour: #ffe900cc;
 $highlight-colour-darkmode: #ffdd03;
 
 html {
@@ -197,7 +197,7 @@ body.dark {
 
 .horizontal-rule {
 	text-align: center;
-	display: none; //***REMOVE***
+	margin: 8rem 0;
 
 	span {
 		height: 12px;
@@ -440,24 +440,20 @@ body.dark {
 /* About styles */
 .about {
 	max-width: 80%;
-	margin: 6.5rem auto;
+	margin: auto;
 	font-family: 'Lato', sans-serif;
-	display: none; //***REMOVE***
 }
 
 .about__title {
-	margin: 2rem 0 3rem;
+	margin: 0;
 }
 
 .about__info {
-	display: flex;
-	justify-content: space-between;
-
 	> img {
 		height: 250px;
 		border-radius: 50%;
-		position: relative;
-		bottom: 50px;
+		display: block;
+		margin: 1.5rem auto 3rem;
 	}
 }
 
@@ -470,22 +466,21 @@ body.dark {
 /* Projects styles */
 .projects {
 	max-width: 80%;
-	margin: 6.5rem auto;
+	margin: auto;
 	font-family: 'Inconsolata', sans-serif;
-	display: none; //***REMOVE***
 }
 
 .projects__title {
-	margin: 2rem 0 3rem;
+	margin: 0 0 3rem;
 	font-family: 'Lato', sans-serif;
 }
 
 .projects--grid {
 	display: grid;
-	grid-template: repeat(2, auto) / repeat(2, 1fr);
+	grid-template: 1fr / repeat(2, 1fr); //4 projects = repeat(2, auto) / repeat(2, 1fr);
 	grid-gap: 2rem;
 	position: relative;
-	height: 800px;
+	height: 400px; //4 projects = 800px;
 }
 
 .project {
@@ -574,7 +569,7 @@ body.dark {
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	display: inline-block;
-	transition: transform 0.4s ease;
+	transition: transform 0.8s ease;
 	position: absolute;
 	height: 100%;
 }
@@ -595,6 +590,17 @@ body.dark {
 
 .project--back--flip {
 	transform: perspective(600px) rotateY(0deg);
+}
+
+/* Contact Styles */
+.contact {
+	max-width: 80%;
+	margin: auto;
+	font-family: 'Lato', sans-serif;
+}
+
+.contact__title {
+	margin: 0 0 3rem;
 }
 
 /* Responsive media queries */
@@ -757,9 +763,9 @@ body.dark {
 
 	/* Projects */
 	.projects--grid {
-		grid-template: repeat(4, 1fr) / 1fr;
-		height: 1500px;
-		grid-gap: 5rem;
+		grid-template: repeat(2, 1fr) / 1fr; //4 projects = repeat(4, 1fr) / 1fr;
+		height: 800px; //4 projects = 1500px;
+		grid-gap: 4rem;
 	}
 
 	.project--front,
@@ -808,18 +814,7 @@ body.dark {
 	}
 
 	.about__title {
-		margin: 2rem 0 3rem;
-	}
-
-	.about__info {
-		flex-direction: column-reverse;
-
-		> img {
-			height: 250px;
-			width: 250px;
-			position: unset;
-			margin: 0 auto;
-		}
+		margin: 2rem 0;
 	}
 
 	.about__info__text {

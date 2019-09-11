@@ -153,7 +153,7 @@ ScrollReveal().reveal('.fade-in', {
 	useDelay: 'onload',
 	delay: 2000,
 	distance: '35px',
-	origin: 'bottom',
+	origin: 'top',
 	duration: 1000,
 	mobile: true
 });
@@ -182,6 +182,16 @@ ScrollReveal().reveal('.projects', {
 	duration: 1200,
 	distance: '150px',
 	origin: 'right',
+	scale: 0.9,
+	mobile: true
+});
+
+ScrollReveal().reveal('.contact', {
+	useDelay: 'onload',
+	delay: 4000,
+	duration: 1200,
+	distance: '150px',
+	origin: 'bottom',
 	scale: 0.9,
 	mobile: true
 });
