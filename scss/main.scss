@@ -90,15 +90,13 @@ body.dark {
 
 	.project__links--icon {
 		color: white;
-
-		&:hover {
-			background-color: $highlight-colour-darkmode;
-		}
 	}
 
 	.project__links--text {
-		background-color: $highlight-colour-darkmode;
-		color: #151515;
+		&:hover {
+			color: #151515;
+			background-color: $highlight-colour-darkmode;
+		}
 	}
 
 	a {
@@ -458,9 +456,10 @@ body.dark {
 }
 
 .about__info__text {
-	font-size: 1.15rem;
-	margin: 0;
-	margin-right: 20px;
+	font-size: 1.25rem;
+	margin: 0 2.5rem;
+	line-height: 1.5;
+	text-align: center;
 }
 
 /* Projects styles */
@@ -480,7 +479,7 @@ body.dark {
 	grid-template: 1fr / repeat(2, 1fr); //4 projects = repeat(2, auto) / repeat(2, 1fr);
 	grid-gap: 2rem;
 	position: relative;
-	height: 400px; //4 projects = 800px;
+	height: 450px; //4 projects = 900px;
 }
 
 .project {
@@ -506,12 +505,13 @@ body.dark {
 .project__info {
 	margin: 1.5rem 3rem;
 	font-size: 1.2rem;
+	line-height: 1.1;
 	font-family: 'Inconsolata', sans-serif;
 }
 
 .project__thumbnail {
 	max-width: 100%;
-	min-height: 100%;
+	min-height: 90%;
 	display: block;
 	margin: auto;
 	object-fit: cover;
@@ -540,11 +540,9 @@ body.dark {
 		display: inline-block;
 		transition: 0.4s ease;
 		border-bottom: unset;
-		border-radius: 50%;
 
 		&:hover {
-			background-color: $highlight-colour;
-			box-shadow: unset;
+			transform: scale(1.25);
 		}
 	}
 
@@ -552,13 +550,17 @@ body.dark {
 		margin: 0.6rem 0;
 		padding: 2px;
 		font-family: 'Montserrat', sans-serif;
-		font-weight: bold;
+		font-weight: 600;
 		background: unset;
 		box-shadow: unset;
 		border: unset;
 		display: block;
-		background-color: $highlight-colour;
 		border-radius: 5px;
+		transition: all 0.4s ease;
+
+		&:hover {
+			background-color: $highlight-colour;
+		}
 	}
 }
 
@@ -764,8 +766,8 @@ body.dark {
 	/* Projects */
 	.projects--grid {
 		grid-template: repeat(2, 1fr) / 1fr; //4 projects = repeat(4, 1fr) / 1fr;
-		height: 800px; //4 projects = 1500px;
-		grid-gap: 4rem;
+		height: 900px; //4 projects = 1500px;
+		grid-gap: 3rem;
 	}
 
 	.project--front,

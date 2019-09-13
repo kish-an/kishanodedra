@@ -57,11 +57,9 @@ body.dark {
     border: 2px solid rgba(255, 255, 255, 0.801); }
   body.dark .project__links--icon {
     color: white; }
-    body.dark .project__links--icon:hover {
-      background-color: #ffdd03; }
-  body.dark .project__links--text {
-    background-color: #ffdd03;
-    color: #151515; }
+  body.dark .project__links--text:hover {
+    color: #151515;
+    background-color: #ffdd03; }
   body.dark a {
     border-bottom: 4px solid #ffdd03; }
   body.dark h3 {
@@ -321,9 +319,10 @@ body.dark {
   margin: 1.5rem auto 3rem; }
 
 .about__info__text {
-  font-size: 1.15rem;
-  margin: 0;
-  margin-right: 20px; }
+  font-size: 1.25rem;
+  margin: 0 2.5rem;
+  line-height: 1.5;
+  text-align: center; }
 
 /* Projects styles */
 .projects {
@@ -340,7 +339,7 @@ body.dark {
   grid-template: 1fr/repeat(2, 1fr);
   grid-gap: 2rem;
   position: relative;
-  height: 400px; }
+  height: 450px; }
 
 .project {
   cursor: pointer;
@@ -363,11 +362,12 @@ body.dark {
 .project__info {
   margin: 1.5rem 3rem;
   font-size: 1.2rem;
+  line-height: 1.1;
   font-family: 'Inconsolata', sans-serif; }
 
 .project__thumbnail {
   max-width: 100%;
-  min-height: 100%;
+  min-height: 90%;
   display: block;
   margin: auto;
   object-fit: cover; }
@@ -389,22 +389,22 @@ body.dark {
     margin: auto;
     display: inline-block;
     transition: 0.4s ease;
-    border-bottom: unset;
-    border-radius: 50%; }
+    border-bottom: unset; }
     .project__links .project__links--icon:hover {
-      background-color: #ffe900cc;
-      box-shadow: unset; }
+      transform: scale(1.25); }
   .project__links .project__links--text {
     margin: 0.6rem 0;
     padding: 2px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     background: unset;
     box-shadow: unset;
     border: unset;
     display: block;
-    background-color: #ffe900cc;
-    border-radius: 5px; }
+    border-radius: 5px;
+    transition: all 0.4s ease; }
+    .project__links .project__links--text:hover {
+      background-color: #ffe900cc; }
 
 .project--front,
 .project--back {
@@ -535,8 +535,8 @@ body.dark {
   /* Projects */
   .projects--grid {
     grid-template: repeat(2, 1fr)/1fr;
-    height: 800px;
-    grid-gap: 4rem; }
+    height: 900px;
+    grid-gap: 3rem; }
   .project--front,
   .project--back {
     width: 100%;
