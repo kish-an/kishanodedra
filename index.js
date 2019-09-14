@@ -160,16 +160,16 @@ ScrollReveal().reveal('.fade-in', {
 
 ScrollReveal().reveal('.fade-in-divider', {
 	useDelay: 'onload',
-	delay: 3500,
-	duration: 2000,
+	delay: 2000,
+	duration: 1500,
 	scale: 0.3,
 	mobile: true
 });
 
 ScrollReveal().reveal('.about', {
 	useDelay: 'onload',
-	delay: 4000,
-	duration: 1200,
+	delay: 2000,
+	duration: 1000,
 	distance: '150px',
 	origin: 'left',
 	scale: 0.9,
@@ -178,8 +178,8 @@ ScrollReveal().reveal('.about', {
 
 ScrollReveal().reveal('.projects', {
 	useDelay: 'onload',
-	delay: 4000,
-	duration: 1200,
+	delay: 2000,
+	duration: 1000,
 	distance: '150px',
 	origin: 'right',
 	scale: 0.9,
@@ -188,8 +188,8 @@ ScrollReveal().reveal('.projects', {
 
 ScrollReveal().reveal('.contact', {
 	useDelay: 'onload',
-	delay: 4000,
-	duration: 1200,
+	delay: 2000,
+	duration: 1000,
 	distance: '150px',
 	origin: 'bottom',
 	scale: 0.9,
