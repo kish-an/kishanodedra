@@ -19,6 +19,8 @@ body {
   fill: #3d3d3d;
   background-color: #f7f7f7;
   transition: all 0.5s ease; }
+  body ::selection {
+    background: #ffe900cc; }
   body a {
     border-bottom: 4px solid #ffe900cc;
     border-radius: 2px;
@@ -36,6 +38,9 @@ body.dark {
   background-color: #131313;
   color: #fff;
   fill: #fff; }
+  body.dark ::selection {
+    background: #ffdd03;
+    color: #151515; }
   body.dark .darkmode__moon {
     display: none; }
   body.dark .darkmode__sun {

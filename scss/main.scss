@@ -29,6 +29,10 @@ body {
 	background-color: $bg-colour;
 	transition: all 0.5s ease;
 
+	::selection {
+		background: $highlight-colour; 
+	}
+
 	a {
 		border-bottom: 4px solid $highlight-colour;
 		border-radius: 2px;
@@ -47,9 +51,14 @@ body {
 }
 
 body.dark {
-	background-color: rgb(19, 19, 19);
+	background-color: #131313;
 	color: #fff;
 	fill: #fff;
+
+	::selection {
+		background: $highlight-colour-darkmode;
+		color: #151515;
+	}
 
 	.darkmode__moon {
 		display: none;
