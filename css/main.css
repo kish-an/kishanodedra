@@ -343,10 +343,10 @@ body.dark {
 
 .projects--grid {
   display: grid;
-  grid-template: 1fr/repeat(2, 1fr);
+  grid-template: repeat(2, auto)/repeat(2, 1fr);
   grid-gap: 2rem;
   position: relative;
-  height: 450px; }
+  height: 900px; }
 
 .project {
   cursor: pointer;
@@ -378,6 +378,59 @@ body.dark {
   display: block;
   margin: auto;
   object-fit: cover; }
+
+.project__tech {
+  height: 2.5rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-family: 'Inconsolata', sans-serif; }
+  .project__tech p {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-weight: bolder; }
+  .project__tech .project__tech__item {
+    flex-grow: 1;
+    color: #353b48;
+    height: 100%;
+    border-top-right-radius: 1rem;
+    text-align: center;
+    padding: 0.6rem; }
+  .project__tech .html {
+    background: #F16529;
+    color: white; }
+  .project__tech .sass {
+    background: #CD6799;
+    color: white; }
+  .project__tech .css {
+    background: #3C99DC;
+    color: white; }
+  .project__tech .bootstrap {
+    background: #553C7B;
+    color: white; }
+  .project__tech .react {
+    background: #61dbfb;
+    color: #212222; }
+  .project__tech .nodejs {
+    background: #303030;
+    color: #68A063; }
+  .project__tech .js {
+    background: #F0DB4F;
+    color: #323330; }
+  .project__tech .mongo {
+    background: #4DB33D;
+    color: #3F3E42; }
+  .project__tech .prempro {
+    background: #523A5C;
+    color: #DB76FA; }
+  .project__tech .photoshop {
+    background: #071E26;
+    color: #5CC8FA; }
 
 .project__links {
   list-style: none;
@@ -564,8 +617,8 @@ body.dark {
       font-size: 1.3rem; }
   /* Projects */
   .projects--grid {
-    grid-template: repeat(2, 1fr)/1fr;
-    height: 900px;
+    grid-template: repeat(3, 1fr)/1fr;
+    height: 1000px;
     grid-gap: 3rem; }
   .project--front,
   .project--back {
@@ -607,6 +660,8 @@ body.dark {
     text-align: left; }
   .project__thumbnail {
     min-height: 85%; }
+  .project__tech {
+    font-size: 0.9rem; }
   .project__links li {
     margin: 0 1.5rem; }
   /* Contact section */

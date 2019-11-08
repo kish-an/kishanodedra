@@ -489,10 +489,10 @@ body.dark {
 
 .projects--grid {
 	display: grid;
-	grid-template: 1fr / repeat(2, 1fr); //4 projects = repeat(2, auto) / repeat(2, 1fr);
+	grid-template: repeat(2, auto) / repeat(2, 1fr); //4 projects = repeat(2, auto) / repeat(2, 1fr);
 	grid-gap: 2rem;
 	position: relative;
-	height: 450px; //4 projects = 900px;
+	height: 900px; //4 projects = 900px;
 }
 
 .project {
@@ -528,6 +528,85 @@ body.dark {
 	display: block;
 	margin: auto;
 	object-fit: cover;
+}
+
+.project__tech {
+	height: 2.5rem;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	font-family: 'Inconsolata', sans-serif;
+	
+	p {
+		margin: 0;
+		padding: 0;
+		font-family: inherit;
+		font-weight: bolder;
+	}
+
+	.project__tech__item {
+		flex-grow: 1;
+		color: #353b48;
+		height: 100%;
+		// border-radius: 1px;
+		border-top-right-radius: 1rem;
+		text-align: center;
+		padding: 0.6rem;
+	}
+
+	.html {
+		background: #F16529;
+		color: white;
+	}
+
+	.sass {
+		background: #CD6799;
+		color: white;
+	}
+
+	.css {
+		background: #3C99DC;
+		color: white;
+	}
+
+	.bootstrap {
+		background: #553C7B;
+		color: white;
+	}
+
+	.react {
+		background:#61dbfb;
+		color: #212222; 
+	}
+
+	.nodejs {
+		background: #303030;
+		color: #68A063;
+	}
+
+	.js {
+		background: #F0DB4F;
+		color: #323330;
+	}
+
+	.mongo {
+		background: #4DB33D;
+		color: #3F3E42;
+	}
+	
+	.prempro {
+		background: #523A5C;
+		color: #DB76FA;
+	}
+
+	.photoshop {
+		background: #071E26;
+		color: #5CC8FA;
+	}
 }
 
 .project__links {
@@ -807,8 +886,8 @@ body.dark {
 
 	/* Projects */
 	.projects--grid {
-		grid-template: repeat(2, 1fr) / 1fr; //4 projects = repeat(4, 1fr) / 1fr;
-		height: 900px; //4 projects = 1500px;
+		grid-template: repeat(3, 1fr) / 1fr; //4 projects = repeat(4, 1fr) / 1fr;
+		height: 1000px; //4 projects = 1500px;
 		grid-gap: 3rem;
 	}
 
@@ -876,6 +955,10 @@ body.dark {
 
 	.project__thumbnail {
 		min-height: 85%;
+	}
+
+	.project__tech {
+		font-size: 0.9rem;
 	}
 
 	.project__links {
