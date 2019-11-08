@@ -78,24 +78,22 @@ function navLinks(x) {
 var x = window.matchMedia('(max-width: 768px)');
 navLinks(x);
 
-//Project card flipping
-document.querySelector('.proj1').addEventListener('click', function() {
-	document
-		.querySelector('.project--front')
-		.classList.toggle('project--front--flip');
-	document
-		.querySelector('.project--back')
-		.classList.toggle('project--back--flip');
-});
+// Project card flipping
+function projFlipper(num) {
+	num = num.toString()
+	document.querySelector(`.proj${num}`).addEventListener('click', function() {
+		document
+			.querySelector(`.proj${num}--front`)
+			.classList.toggle('project--front--flip');
+		document
+			.querySelector(`.proj${num}--back`)
+			.classList.toggle('project--back--flip');
+	});
+}
 
-document.querySelector('.proj2').addEventListener('click', function() {
-	document
-		.querySelector('.proj2--front')
-		.classList.toggle('project--front--flip');
-	document
-		.querySelector('.proj2--back')
-		.classList.toggle('project--back--flip');
-});
+projFlipper(1);
+projFlipper(2);
+projFlipper(3);
 
 //Darkmode function
 function darkMode() {
