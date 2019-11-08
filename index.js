@@ -145,6 +145,3 @@ var title = new Typed('.main-title--name', {
 	startDelay: 600,
 	loop: false
 });
-
-//AOS settings
-AOS.refresh();
