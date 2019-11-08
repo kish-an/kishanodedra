@@ -147,4 +147,4 @@ var title = new Typed('.main-title--name', {
 });
 
 //AOS settings
-AOS.init();
+AOS.refresh();
