@@ -2,10 +2,6 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth; }
 
-/* Stops ScrollReveal flickering */
-html.sr .load-hidden {
-  visibility: hidden; }
-
 *,
 *:before,
 *:after {

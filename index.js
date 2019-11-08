@@ -80,7 +80,7 @@ navLinks(x);
 
 // Project card flipping
 function projFlipper(num) {
-	num = num.toString()
+	num = num.toString();
 	document.querySelector(`.proj${num}`).addEventListener('click', function() {
 		document
 			.querySelector(`.proj${num}--front`)
@@ -142,54 +142,9 @@ var searchbar = new Typed('.nav__searchbar', options);
 var title = new Typed('.main-title--name', {
 	stringsElement: '.main-title__name',
 	typeSpeed: 70,
-	startDelay: 800,
+	startDelay: 600,
 	loop: false
 });
 
-//ScrollReveal settings
-ScrollReveal().reveal('.fade-in', {
-	useDelay: 'onload',
-	delay: 2000,
-	distance: '35px',
-	origin: 'top',
-	duration: 1000,
-	mobile: true
-});
-
-ScrollReveal().reveal('.fade-in-divider', {
-	useDelay: 'onload',
-	delay: 2000,
-	duration: 1500,
-	scale: 0.3,
-	mobile: true
-});
-
-ScrollReveal().reveal('.about', {
-	useDelay: 'onload',
-	delay: 2000,
-	duration: 1000,
-	distance: '150px',
-	origin: 'left',
-	scale: 0.9,
-	mobile: true
-});
-
-ScrollReveal().reveal('.projects', {
-	useDelay: 'onload',
-	delay: 2000,
-	duration: 1000,
-	distance: '150px',
-	origin: 'right',
-	scale: 0.9,
-	mobile: true
-});
-
-ScrollReveal().reveal('.contact', {
-	useDelay: 'onload',
-	delay: 2000,
-	duration: 1000,
-	distance: '150px',
-	origin: 'bottom',
-	scale: 0.9,
-	mobile: true
-});
+//AOS settings
+AOS.init();

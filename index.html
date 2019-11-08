@@ -24,6 +24,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
@@ -33,7 +34,6 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://kit.fontawesome.com/74e453f1c5.js"></script>
     <script src="index.js" async></script>
 </head>
@@ -137,27 +137,27 @@
     </div>
 
     <main>
-        <section class="main-title__name load-hidden">
+        <section class="main-title__name" data-aos="fade-in">
             <h1>Hi I'm Kishan Odedra.</h1>
         </section>
         <div class="main-title--container">
             <span class="main-title--name"></span>
         </div>
 
-        <section class="main-title__info fade-in load-hidden">
+        <section class="main-title__info" data-aos="fade-in">
             <h2 class="main-title__info--highlighted">Web developer</h2><span class="main-title__info--divider">/</span>
             <h2 class="main-title__info--highlighted">Biomedical Science student</h2><span
                 class="main-title__info--divider">/</span>
             <h2 class="main-title__info--highlighted">Graphic designer</h2>
         </section>
 
-        <div class="horizontal-rule fade-in-divider">
+        <div class="horizontal-rule" data-aos="fade-in">
             <span class="red"></span>
             <span class="yellow"></span>
             <span class="green"></span>
         </div>
 
-        <section class="about" id="about">
+        <section class="about" id="about" data-aos="fade-in">
             <h3 class="about__title">About Me</h3>
             <div class="about__info">
                 <img src="images/ProfilePicCropped.JPG" alt="">
@@ -165,13 +165,13 @@
             </div>
         </section>
 
-        <div class="horizontal-rule fade-in-divider">
+        <div class="horizontal-rule" data-aos="fade-in">
             <span class="red"></span>
             <span class="yellow"></span>
             <span class="green"></span>
         </div>
 
-        <section class="projects" id="projects">
+        <section class="projects" id="projects" data-aos="fade-in">
             <h3 class="projects__title">Projects</h3>
             <div class="projects--grid">
                 <div class="project proj1">
@@ -204,7 +204,7 @@
                     </div>
                 </div>
 
-                <div class="project proj2">
+                <div class="project proj2" data-aos="fade-in">
                     <div class="project--front proj2--front">
                         <h4 class="project__title">Danbo Explains</h4>
                         <img class="project__thumbnail" src="images/Danbo-Explains.png" alt="">
@@ -257,13 +257,13 @@
             </div>
         </section>
 
-        <div class="horizontal-rule fade-in-divider">
+        <div class="horizontal-rule" data-aos="fade-in">
             <span class="red"></span>
             <span class="yellow"></span>
             <span class="green"></span>
         </div>
 
-        <section class="contact" id="contact">
+        <section class="contact" id="contact" data-aos="fade-in">
             <h3 class="contact__title">Contact Me</h3>
                 <ul class="contact__links">
                     <li class="contact__link">
@@ -284,6 +284,8 @@
             </div>
         </section>
     </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 
 </html>
