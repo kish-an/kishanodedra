@@ -695,7 +695,8 @@ body.dark {
 }
 
 .contact__links {
-	display: block;
+	display: flex;
+	justify-content: space-between;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -704,6 +705,7 @@ body.dark {
 
 .contact__link {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	padding: 1rem;
 
@@ -881,7 +883,20 @@ body.dark {
 		}
 	}
 
+	/* About section */
+	.about {
+		text-align: center;
+	}
+
 	/* Projects */
+	.projects {
+		text-align: center;
+	}
+
+	.projects--grid {
+		text-align: left;
+	}
+
 	.projects--grid {
 		grid-template: repeat(3, 1fr) / 1fr; //4 projects = repeat(4, 1fr) / 1fr;
 		height: 1000px; //4 projects = 1500px;
@@ -898,6 +913,19 @@ body.dark {
 	.project__thumbnail {
 		display: block;
 		margin: auto;
+	}
+
+	/* Contact section */
+	.contact {
+		text-align: center;
+	}
+
+	.contact__links {
+		display: block;
+	}
+
+	.contact__link {
+		justify-content: center;
 	}
 }
 
@@ -939,10 +967,6 @@ body.dark {
 	}
 
 	/* About section */
-	.about {
-		text-align: center;
-	}
-
 	.about__title {
 		margin: 2rem 0;
 	}
@@ -952,14 +976,6 @@ body.dark {
 	}
 
 	/* Project section */
-	.projects {
-		text-align: center;
-	}
-
-	.projects--grid {
-		text-align: left;
-	}
-
 	.project__thumbnail {
 		min-height: 85%;
 	}
@@ -972,11 +988,6 @@ body.dark {
 		li {
 			margin: 0 1.5rem;
 		}
-	}
-
-	/* Contact section */
-	.contact {
-		text-align: center;
 	}
 }
 
