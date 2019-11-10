@@ -145,10 +145,10 @@
         </div>
 
         <section class="main-title__info" data-aos="fade-in">
-            <h2 class="main-title__info--highlighted">Web developer</h2><span class="main-title__info--divider">/</span>
-            <h2 class="main-title__info--highlighted">Biomedical Science student</h2><span
+            <h2 class="main-title__info--highlighted">Developer</h2><span class="main-title__info--divider">/</span>
+            <h2 class="main-title__info--highlighted">Student</h2><span
                 class="main-title__info--divider">/</span>
-            <h2 class="main-title__info--highlighted">Graphic designer</h2>
+            <h2 class="main-title__info--highlighted">Designer</h2>
         </section>
 
         <div class="horizontal-rule" data-aos="fade-in">
@@ -157,7 +157,7 @@
             <span class="green"></span>
         </div>
 
-        <section class="about" id="about" data-aos="fade-in">
+        <section class="about" id="about" data-aos="zoom-in">
             <h3 class="about__title">About Me</h3>
             <div class="about__info">
                 <img src="images/ProfilePicCropped.JPG" alt="">
@@ -174,7 +174,7 @@
         <section class="projects" id="projects" data-aos="fade-in">
             <h3 class="projects__title">Projects</h3>
             <div class="projects--grid">
-                <div class="project proj1">
+                <div class="project proj1" data-aos="fade-in">
                     <div class="project--front proj1--front">
                         <h4 class="project__title">HealthWhere</h4>
                         <img class="project__thumbnail" src="images/HealthWhere.png" alt="">
@@ -215,7 +215,7 @@
                     </div>
                     <div class="project--back proj2--back">
                         <h4 class="project__title">Danbo Explains</h4>
-                        <p class="project__info">Danbo Explains is part of an imagined series, where each episode focuses on an aspect of the human body in regards to health and disease. The focus of this video is the heart, we decided the best way to appeal to our intended audience of primary school children was to use a fictional character, which could help them visualise difficult concepts whilst also making it more fun and engaging. We settled on using stop motion to animate movements in order to produce a fluid style.</p>
+                        <p class="project__info">Danbo Explains is part of an imagined series of videos that focus on aspects of the human body in regards to health and disease. We decided the best way to appeal to our intended audience of primary school children was to use a fictional character, which could help them visualise difficult concepts whilst also making it more fun and engaging. We settled on using stop motion to animate movements in order to produce a fluid style.</p>
                         <ul class="project__links">
                             <li>
                                 <a class="project__links--icon" href="https://www.youtube.com/watch?v=Y4EvYcSEaMw" target="_blank" rel="noopener noreferrer"><i
@@ -226,7 +226,7 @@
                     </div>
                 </div>
 
-                <div class="project proj3">
+                <div class="project proj3" data-aos="fade-in">
                     <div class="project--front proj3--front">
                         <h4 class="project__title">inteRX</h4>
                         <img class="project__thumbnail" src="images/interx.png" alt="">
@@ -239,7 +239,7 @@
                     </div>
                     <div class="project--back proj3--back">
                         <h4 class="project__title">inteRX</h4>
-                        <p class="project__info">inteRX is a full stack web application that allows users to search for interactions between multiple drugs, and alerts the user if there is a potential hazard in taking the combination of drugs they have searched. Submitted as part of HackSheffield5 and won 3rd place for best hack. This was my first time using git collaboratively which taught me how to handle merges and conflict scenarios. I also learnt how to use React to create the UI for the app and how to integrate data with the backend.</p>
+                        <p class="project__info">inteRX is a full stack web application that allows users to search for interactions between multiple drugs, and alerts them if there is a potential hazard in taking the combination of drugs they have searched. Submitted as part of HackSheffield5 which won 3rd place for best hack. Using git collaboratively taught me how to handle merges and conflict scenarios. I also learnt how to use React to create UIs and how to integrate data with the backend.</p>
                         <ul class="project__links">
                             <li>
                                 <a class="project__links--icon" href="https://github.com/shish-kabobs/interx"
@@ -288,9 +288,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         //AOS
-        AOS.init({
-            startEvent: 'load',
-        });
+        AOS.init();
     </script>
 </body>
 

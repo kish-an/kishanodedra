@@ -671,6 +671,7 @@ body.dark {
 .project--back {
 	transform: perspective(600px) rotateY(180deg);
 	overflow: scroll;
+	// visibility: hidden; --> stops scrolling from 'sticking' on project cards
 }
 
 .project--front--flip {
@@ -679,6 +680,7 @@ body.dark {
 
 .project--back--flip {
 	transform: perspective(600px) rotateY(0deg);
+	// visibility: visible;
 }
 
 /* Contact Styles */
