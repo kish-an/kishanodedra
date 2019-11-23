@@ -478,8 +478,16 @@ body.dark {
 }
 
 .projects__title {
-	margin: 0 0 3rem;
+	margin: 0 0 1rem;
 	font-family: 'Lato', sans-serif;
+}
+
+.projects__subtitle {
+	margin: 0 0 2rem;
+
+	.fa-hand-pointer {
+		margin-right: 0.6rem;
+	}
 }
 
 .projects--grid {
