@@ -112,7 +112,7 @@ body.dark {
     border-bottom: none;
     box-shadow: none; }
 
-/* Poor support 
+/* Poor support
 @media (prefers-color-scheme: dark) {
 	body {
 		background-color: rgb(19, 19, 19);
@@ -432,6 +432,12 @@ body.dark {
   .project__tech .photoshop {
     background: #071E26;
     color: #5CC8FA; }
+  .project__tech .flask {
+    background: black;
+    color: white; }
+  .project__tech .python {
+    background: #306998;
+    color: #FFD43B; }
 
 .project__links {
   list-style: none;

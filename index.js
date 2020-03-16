@@ -94,6 +94,7 @@ function projFlipper(num) {
 projFlipper(1);
 projFlipper(2);
 projFlipper(3);
+projFlipper(4);
 
 //Darkmode function
 function darkMode() {
@@ -125,7 +126,7 @@ var options = {
 	strings: [
 		'^1000https://www.My name is Kishan.^8000',
 		"https://www.I'm a self taught web developer.^8000",
-		"https://www.I'm a 2nd year BSc Biomedical Science student.^8000",
+		"https://www.I'm a 3rd year BSc Biomedical Science student.^8000",
 		'https://www.Get in touch at kishan@kishanodedra.com^8000'
 	],
 	typeSpeed: 90,
