@@ -633,8 +633,8 @@ body.dark {
   .projects--grid {
     text-align: left; }
   .projects--grid {
-    grid-template: repeat(3, 1fr)/1fr;
-    height: 1000px;
+    grid-template: repeat(4, 1fr)/1fr;
+    height: 1500px;
     grid-gap: 3rem; }
   .project--front,
   .project--back {
