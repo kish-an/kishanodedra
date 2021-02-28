@@ -317,7 +317,7 @@ body.dark {
 
 .about__info > img {
   height: 250px;
-  border-radius: 50%;
+  border-radius: 10px;
   display: block;
   margin: 1.5rem auto 3rem; }
 
