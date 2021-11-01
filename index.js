@@ -126,7 +126,7 @@ var options = {
 	strings: [
 		'^1000https://www.My name is Kishan.^8000',
 		"https://www.I'm a self taught web developer.^8000",
-		"https://www.I'm a 3rd year BSc Biomedical Science student.^8000",
+		"https://www.I'm a MSc Computer Science student.^8000",
 		'https://www.Get in touch at kishan@kishanodedra.com^8000'
 	],
 	typeSpeed: 90,
